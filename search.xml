@@ -1,14 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[resume]]></title>
-    <url>%2F2019%2F03%2F05%2Fresume%2F</url>
-    <content type="text"><![CDATA[李波 18290296998 · 18290296998@163.com · Aroue 个人信息 男，1997 年出生 求职意向：Java 研发工程师 教育经历 学士，重庆理工大学，软件工程专业，2016.9~2020.7 绩点：2.82，年级前 40% 通过了 CET4 英语等级考试 三次获得学校奖学金 获得重庆理工大学第三届“大家杯”软件创意、创新大赛——作品阶段一等奖 工作经历 重庆奇点新宇信息技术有限公司，研发部门，2018.10~2018.12 负责 后台业务流程开发 项目经历 XXXX 项目 使用到的技术 使用一两句话描述项目的主要功能，然后介绍自己在项目中的角色，解决了什么问题，使用什么方式解决，比别人的方法相比有什么优势（尽量用数据来说明）。 技能清单 ★★★ Java ★★☆ ruby ★★☆ MySQL ★★☆ Spring ★☆☆ RabbitMQ、ZooKeeper]]></content>
-      <tags>
-        <tag>resume</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[Docker mysql实例操作]]></title>
     <url>%2F2018%2F11%2F23%2FDocker-mysql%E5%AE%9E%E4%BE%8B%E6%93%8D%E4%BD%9C%2F</url>
     <content type="text"><![CDATA[用Docker的mysql镜像创建实例并连接镜像数据库，常规来讲，数据库安装，卸载都是十分复杂的，很容易就讲环境搞崩，而采用Docker镜像的方式就不会出现这种问题，你可以轻松的创建若干个mysql实例，对于学习很有帮助，下面就是对mysql镜像的一些基础操作,在这之前可以DockerHub的mysql官网文档。 拉取mysql镜像官方文档写的是1shell&gt; docker pull mysql/mysql-server:tag 由于本地已经又mysql:5.7的镜像，我们这里就可以直接不选tag，他默认的拉取的是latest的镜像,但是的latest的镜像会出出现问题，建议还是使用mysql:5.71$ docker pull mysql 创建mysql容器接下来运行mysql的一个容器,mysql容器设置了环境变量，所以在运行容器时要加上MYSQL_ROOT_PASSWORD（root用户的密码）mysql镜像暴露的端口号为3306,运行下面的命令，一个mysql容器就创建成功了，用docker ps命令查看当前容器已经启动了。1$ docker run --name mysql1 -d -p 23306:3306 -e MYSQL_ROOT_PASSWORD=root mysql 进入容器内部这里的 d9是容器ID的简写形式，也可以换成容器名，这样就进入mysql容器内部了1$ docker exec -it d9 bash 可以试试是否可以连接到数据库,正确输入密码之以后就可以连接到数据库1$ mysql -u root -p 本地连接Docker中mysql容器实例这里用navicat连接刚刚的数据库就可以了]]></content>
